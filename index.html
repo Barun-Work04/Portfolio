@@ -4,146 +4,450 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Personal Portfolio Website</title>
+    <meta name="description" content="Barun Sahoo - Personal Portfolio Website showcasing web development, video editing, and software engineering skills">
+    <meta name="keywords" content="web developer, software engineer, video editor, portfolio, Barun Sahoo">
+    <meta name="author" content="Barun Sahoo">
+    <meta name="theme-color" content="#033a80">
+    <title>Barun Sahoo - Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
 </head>  
 <body>
-    <header>
-        <a href="#" class="logo"><span>Portfolio </span></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar"> 
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-        <div class="bx bx-moon" id="darkmode"></div>
-        </ul>
+    <header id="header">
+        <a href="#" class="logo" aria-label="Portfolio Home"><span>Portfolio</span></a>
+        <div class="bx bx-menu" id="menu-icon" aria-label="Toggle menu" role="button" tabindex="0"></div>
+        <nav>
+            <ul class="navbar"> 
+                <li><a href="#home" aria-current="page">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Works</a></li>
+                <li><button class="bx bx-moon" id="darkmode" aria-label="Toggle dark mode"></button></li>
+            </ul>
+        </nav>
     </header>
-    <section class="home" id="home">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/barun-sahoo-164283262/"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://www.instagram.com/_barunsahoo/"><i class="bx bxl-instagram"></i></a>
-        </div>
-        <div class="home-img">
-            <img class="hero user-image" src="IMG_3037.JPG" alt="">
-        </div>
-        <div class="home-text">
-            <span>Hello, I'm</span>
-            <h1>Barun Sahoo</h1>
-            <h2>I am a <span class="role"></span> </h2>
-            <p>I'm a software developer and here is my portfolio website. Here you'll learn about my journey as a software developer.</p>
-            <a href="#" class="btn">Download CV</a>
-            <div class="absolute faded-text">Barun Sahoo</div>
-        </div>
-    </section>
-    <section class="about" id="about">
-        <div class="heading">
-            <h2>About Me</h2>
-            <span>Introduction </span>
-        </div>
-        <div class="about-container">
-            <div class="about-img">
-                <img class="hero" src="IMG-20241224-WA0013.jpg" alt="">
-            </div>
-            <div class="about-text">
-                <p>I am an aspiring web developer passionate about building websites and exploring various fields within technology. My journey began with a curiosity about how websites are made, and now I am dedicated to creating engaging and user-friendly online experiences.<br><br>
 
-                    Currently, I am studying at Sikkim Manipal Institute of Technology (2023-2027), honing my skills in programming languages, design principles, and web technologies. Beyond web development, I have a strong passion for filmmaking and creative work, finding beauty in capturing a person's uniqueness through video and other mediums.<br><br>
+    <main>
+        <section class="home" id="home">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/barun-sahoo-164283262/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.instagram.com/_barunsahoo/" aria-label="Instagram" target="_blank" rel="noopener"><i class="bx bxl-instagram"></i></a>
+            </div>
+            <div class="home-img">
+                <img class="hero user-image" src="IMG_3037.JPG" alt="Barun Sahoo" loading="eager">
+            </div>
+            <div class="home-text">
+                <span>Hello, I'm</span>
+                <h1>Barun Sahoo</h1>
+                <h2>I am a <span class="role"></span></h2>
+                <p>I'm a software developer and here is my portfolio website. Here you'll learn about my journey as a software developer.</p>
+                <a href="#" class="btn" download>Download CV</a>
+                <div class="absolute faded-text" aria-hidden="true">Barun Sahoo</div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="heading">
+                <h2>About Me</h2>
+                <span>Introduction</span>
+            </div>
+            <div class="about-container">
+                <div class="about-img">
+                    <img class="hero" src="IMG-20241224-WA0013.jpg" alt="Barun Sahoo portrait" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <p class="animate">I am an aspiring web developer passionate about building websites and exploring various fields within technology. My journey began with a curiosity about how websites are made, and now I am dedicated to creating engaging and user-friendly online experiences.</p>
+
+                    <p class="animate">Currently, I am studying at Sikkim Manipal Institute of Technology (2023-2027), honing my skills in programming languages, design principles, and web technologies. Beyond web development, I have a strong passion for filmmaking and creative work, finding beauty in capturing a person's uniqueness through video and other mediums.</p>
+                        
+                    <p class="animate">With experience in Canva, Adobe Premiere Pro, Adobe Photoshop, and short-form video management, I have worked on poster design, certification publishing, and event promotions. I enjoy collaborating on projects, learning from others, and continuously refining my craft. Additionally, I am exploring AI integration for voice commands, looking for innovative ways to enhance user interaction with technology.</p>
                     
-                    With experience in Canva, Adobe Premiere Pro, Adobe Photoshop, and short-form video management, I have worked on poster design, certification publishing, and event promotions. I enjoy collaborating on projects, learning from others, and continuously refining my craft. Additionally, I am exploring AI integration for voice commands, looking for innovative ways to enhance user interaction with technology.
-                    </p>
-                <div class="information">
-                    <div class="info-box">
-                        <i class="bx bxs-user"></i>
-                        <span>Barun Sahoo</span>
+                    <div class="information">
+                        <div class="info-box">
+                            <i class="bx bxs-user"></i>
+                            <span>Barun Sahoo</span>
+                        </div>
+                        <div class="info-box">
+                            <i class='bx bxs-phone-call'></i>
+                            <span>+91 7076252953</span>
+                        </div>
+                        <div class="info-box">
+                            <i class='bx bxl-gmail'></i>
+                            <span>barunsahoo04@gmail.com</span>
+                        </div>
                     </div>
-                    <div class="info-box">
-                        <i class='bx bxs-phone-call'></i>
-                        <span>+91 7076252953</span>
+                    <a href="#" class="btn" download>Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="heading">
+                <h2>Skills</h2>
+                <span>My Technical Expertise</span>
+            </div>
+            <div class="skills-container">
+                <div class="bars">
+                    <div class="bars-box" data-skill="HTML">
+                        <h3>HTML</h3>
+                        <span>95%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar html-bar"></div>
                     </div>
-                    <div class="info-box">
-                        <i class='bx bxl-gmail' ></i>
-                        <span>barunsahoo04@gmail.com</span>
+                    <div class="bars-box" data-skill="CSS">
+                        <h3>CSS</h3>
+                        <span>85%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar css-bar"></div>
+                    </div>
+                    <div class="bars-box" data-skill="JavaScript">
+                        <h3>JavaScript</h3>
+                        <span>75%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar js-bar"></div>
+                    </div>
+                    <div class="bars-box" data-skill="React">
+                        <h3>React</h3>
+                        <span>50%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar react-bar"></div>
                     </div>
                 </div>
-                <a href="#" class="btn">Download CV</a>
             </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="heading">
-            <h2>Skills</h2>
-            <span>My Skills</span>
-        </div>
-        <div class="skills-container">
-            <div class="bars">
-                <div class="bars-box">
-                    <h3>HTML</h3>
-                    <span>95%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar html-bar"></div>
+        </section>
+        
+
+        <section class="services" id="services">
+            <div class="heading">
+                <h2>Works</h2>
+                <span>My Projects</span>
+            </div>
+            <div class="services-container">
+                <div class="services-box" data-category="web-development">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Web Development</h3>
+                    <a href="#web-dev-journey" class="journey-link">Learn More</a>
                 </div>
-                <div class="bars-box">
-                    <h3>CSS</h3>
-                    <span>85%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar css-bar"></div>
+                <div class="services-box" data-category="video-editing">
+                    <i class="bx bx-server"></i>
+                    <h3>Video Editing</h3>
+                    <a href="#video-editing-journey" class="journey-link">Learn More</a>
                 </div>
-                <div class="bars-box">
-                    <h3>Javascript</h3>
-                    <span>75%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar js-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>React</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar react-bar"></div>
+                <div class="services-box" data-category="software-engineering">
+                    <i class='bx bxs-cog'></i>
+                    <h3>Backend Development</h3>
+                    <a href="#software-engineering-journey" class="journey-link">Learn More</a>
                 </div>
             </div>
-            <div class="skills-img">
-                <img class="hero" src="user.png" alt="">
+        </section>
+        
+        <!-- Web Development Journey Section -->
+        <section class="journey" id="web-dev-journey">
+            <div class="heading">
+                <h2>Web Development Journey</h2>
+                <span>My Path as a Web Developer</span>
             </div>
-        </div>
-    </section>
-    <section class="services" id="services">
-        <div class="heading">
-            <h2>Works</h2>
-            <span>My Projects</span>
-        </div>
-        <div class="services-container">
-            <div class="services-box">
-                <i class="bx bx-code-alt"></i>
-                <h3>Web Development</h3>
-                <a href="#">Learn More</a>
+            <div class="journey-container">
+                <div class="journey-img">
+                    <img class="hero" src="Porr.png" alt="Web Development" loading="lazy">
+                    <img class="hero" src="Bac.png" alt="Web Development" loading="lazy">
+                </div>
+                <div class="journey-text">
+                    <div class="timeline">
+                        <div class="timeline-item slide-up">
+                            <h3>How It All Started</h3>
+                            <p>My web development journey began during my first year at SMIT when I became fascinated with how websites work. Starting with HTML and CSS basics, I built simple static pages to understand the fundamentals of web structure and styling.</p>
+                        </div>
+                        
+                        <div class="timeline-item slide-up">
+                            <h3>Growth and Learning</h3>
+                            <p>As I progressed, I dove into JavaScript to add interactivity to my projects. I learned responsive design principles and built portfolio projects.</p>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-title">
+                                    <span>HTML & CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-title">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress-title">
+                                    <span>React.js</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item slide-up">
+                            <h3>Current Focus</h3>
+                            <p>Currently, I'm exploring React.js to build more complex, interactive web applications. I am also currently working on a Group Project on Automated Time Table Management System.
+                                I'm particularly interested in creating seamless user experiences and learning about modern web development practices like state management and API integration.
+                                Still exploring.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3>Notable Projects</h3>
+                    <div class="project-cards">
+                        <div class="project-card fade-in">
+                            <h4>Personal Portfolio</h4>
+                            <p>A responsive personal website showcasing my skills and projects using modern design principles.</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card fade-in">
+                            <h4>Automated Time Table Management System</h4>
+                            <p>Redundant and Conflict Free Time Table Management System </p>
+                            <div class="tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Mongo DB</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#services" class="btn back-btn"><i class='bx bx-arrow-back'></i> Back to Works</a>
+                </div>
             </div>
-            <div class="services-box">
-                <i class="bx bx-server"></i>
-                <h3>Video Editing</h3>
-                <a href="#">Learn More</a>
+        </section>
+        
+       <!-- Video Editing Journey Section -->
+<section class="journey" id="video-editing-journey">
+    <div class="heading">
+        <h2>Video Editing Journey</h2>
+        <span>My Creative Evolution</span>
+    </div>
+    <div class="journey-container">
+        <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nvoNiJMCz-Q?si=R-ZCSZlUohKgEQMS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div id='tpYtContainer'><iframe width="540" height="920" src="https://www.youtube.com/embed/WlPG6iNojdI" frameborder="0"></iframe></div>
+                <div id='tpYtContainer'><iframe width="540" height="920" src="https://www.youtube.com/embed/DpqzPtgYUXE" frameborder="0"></iframe></div>
             </div>
-            <div class="services-box">
-                <i class='bx bxs-cog' ></i>
-                <h3>Software Engineer</h3>
-                <a href="#">Learn More</a>
+        <div class="journey-text">
+            <div class="timeline">
+                <div class="timeline-item slide-up">
+                    <h3>Finding My Creative Voice</h3>
+                    <p>My passion for video editing began when I started creating vlogs and creative videos for school events. Using simple editing tools initially, I discovered the power of visual storytelling through filmmaking competitions and collaborative music videos, which deepened my commitment to developing this skill further.</p>
+                </div>
+                
+                <div class="timeline-item slide-up">
+                    <h3>Skill Development</h3>
+                    <p>I gradually progressed to using more advanced software like Adobe Premiere Pro and expanded my skillset to include transitions, color grading, and sound design. Each project has been an opportunity to experiment with different editing styles and techniques.</p>
+                    
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>Adobe Premiere Pro</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>Photoshop</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>Canva</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item slide-up">
+                    <h3>Professional Growth</h3>
+                    <p>I got the opportunity to work as a Social Media Intern at Citizens for Public Leadership since October 2024. This role has allowed me to enhance my skills in content creation, video editing, and digital storytelling while adapting to different audience needs and platforms.</p>
+                </div>
             </div>
-        </div>
-    <div class="footer">
-        <h2>Follow Us</h2>
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/barun-sahoo-164283262/"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://www.instagram.com/_barunsahoo/"><i class="bx bxl-instagram"></i></a>
+            
+            <h3>Notable Projects</h3>
+            <div class="project-cards">
+                <div class="project-card fade-in">
+                    <h4>Filmmaking Competitions</h4>
+                    <p>Participated in and created videos for filmmaking competitions, showcasing storytelling and editing skills.</p>
+                    <div class="tags">
+                        <span class="tag">Premiere Pro</span>
+                        <span class="tag">Music Sync</span>
+                        <span class="tag">Color Grading</span>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <h4>CPL: Session Clips</h4>
+                    <p>Edited and curated key moments from CPL sessions to create engaging and informative clips.</p>
+                    <div class="tags">
+                        <span class="tag">Motion Graphics</span>
+                        <span class="tag">Sound Design</span>
+                        <span class="tag">Visual Effects</span>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <h4>CPL: Meet the Team</h4>
+                    <p>Developed introduction videos highlighting the CPL team members and their roles.</p>
+                    <div class="tags">
+                        <span class="tag">Documentary</span>
+                        <span class="tag">Interviews</span>
+                        <span class="tag">Storytelling</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#services" class="btn back-btn"><i class='bx bx-arrow-back'></i> Back to Works</a>
         </div>
     </div>
-    <div class="copyright">
-        &#169; PortFolio | All Right Reserved
-    </div> 
+</section>
+
+        <!-- Backend Journey Section -->
+        <section class="journey" id="software-engineering-journey">
+            <div class="heading">
+                <h2>Backend Development</h2>
+                <span>My Technical Evolution</span>
+            </div>
+            <div class="journey-container">
+                <div class="journey-img">
+                    <img class="hero" src="Bac.png" alt="Software Engineering" loading="lazy">
+                    <img class="hero" src="Bac2.png" alt="Software Engineering" loading="lazy">
+                </div>
+                <div class="journey-text">
+                    <div class="timeline">
+                        <div class="timeline-item slide-up">
+                            <h3>Backend Development & Database Management</h3>
+                            <p>I worked on an Automated Time Table Management System, designed to create a redundant-free and conflict-free scheduling solution. This project leveraged JavaScript, MongoDB, HTML, and CSS to streamline timetable management, ensuring efficiency and accuracy in scheduling.</p>
+                        </div>
+                        
+                        
+                    <h3>Notable Projects</h3>
+                    <div class="project-cards">
+                        <div class="project-card fade-in">
+                            <h4>Automated Time Table Management System</h4>
+                            <p>Redundant and Conflict Free Time Table Management System</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Mongo DB</span>
+                            </div>
+                        </div>
+                        
+                        
+                    
+                    <a href="#services" class="btn back-btn"><i class='bx bx-arrow-back'></i> Back to Works</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <h2>Follow Me</h2>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/barun-sahoo-164283262/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.instagram.com/_barunsahoo/" aria-label="Instagram" target="_blank" rel="noopener"><i class="bx bxl-instagram"></i></a>
+            </div>
+    </footer>
+
+    <a href="#home" class="scroll-top" aria-label="Scroll to top">
+        <i class="bx bx-up-arrow-alt"></i>
+    </a>
+    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
     <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow');
+            } else {
+                header.classList.remove('shadow');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+        
+        menuIcon.addEventListener('click', function() {
+            navbar.classList.toggle('active');
+            menuIcon.classList.toggle('bx-x');
+        });
+        
+        // Keyboard accessibility for menu toggle
+        menuIcon.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navbar.classList.toggle('active');
+                menuIcon.classList.toggle('bx-x');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function() {
+                navbar.classList.remove('active');
+                menuIcon.classList.remove('bx-x');
+            });
+        });
+
+        // Dark mode toggle
+        const darkModeIcon = document.getElementById('darkmode');
+        
+        darkModeIcon.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeIcon.classList.replace('bx-moon', 'bx-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeIcon.classList.replace('bx-sun', 'bx-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeIcon.classList.replace('bx-moon', 'bx-sun');
+        }
+
+        // Typing animation
         var typeData = new Typed(".role", {
             strings: [
                 "Software Developer",
@@ -155,6 +459,77 @@
             typeSpeed: 100,
             backSpeed: 80,
             backDelay: 1000,
+        });
+        
+        // Smooth scroll function for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('progress-bar-fill')) {
+                            const width = entry.target.getAttribute('style').split(':')[1].trim();
+                            entry.target.style.width = "0";
+                            setTimeout(() => {
+                                entry.target.style.width = width;
+                            }, 100);
+                        } else if (entry.target.classList.contains('timeline-item')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('project-card')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('bars-box')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('services-box')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('about-text p')) {
+                            entry.target.classList.add('animate');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(animateOnScroll, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            // Observe elements for animation
+            document.querySelectorAll('.progress-bar-fill, .timeline-item, .project-card, .bars-box, .services-box, .about-text p').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Add hover effects for journey boxes
+            const journeyLinks = document.querySelectorAll('.journey-link');
+            journeyLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.parentElement.classList.add('hovered');
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.parentElement.classList.remove('hovered');
+                });
+            });
         });
     </script>
 </body>
