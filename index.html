@@ -17,6 +17,8 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </head>  
 <body>
     <header id="header">
@@ -139,6 +141,11 @@
                     <h3>Video Editing</h3>
                     <a href="#video-editing-journey" class="journey-link">Learn More</a>
                 </div>
+                <div class="services-box" data-category="Coding">
+                    <box-icon name='code-block' type='solid' color='var(--main-color)'></box-icon>
+                    <h3>Coding</h3>
+                    <a href="#coding-journey" class="journey-link">Learn More</a>
+                </div>                    
                 <div class="services-box" data-category="software-engineering">
                     <i class='bx bxs-cog'></i>
                     <h3>Backend Development</h3>
@@ -374,6 +381,110 @@
                 </div>
             </div>
         </section>
+
+        <!-- Coding Journey Section -->
+<section class="journey" id="coding-journey">
+    <div class="heading">
+        <h2>My Coding Journey</h2>
+        <span>From Basics to Building Solutions</span>
+    </div>
+    <div class="journey-container">
+        <div class="journey-img">
+            <img class="hero" src="TECH.png" alt="Coding Journey" loading="lazy">
+            <img class="hero" src="LogicBuild.png" alt="Problem Solving" loading="lazy">
+        </div>
+        <div class="journey-text">
+            <div class="timeline">
+                <div class="timeline-item slide-up">
+                    <h3>Where It All Began</h3>
+                    <p>My coding journey kicked off with C — the language that taught me the value of logic and structure. It was during my first year that I wrote my very first program, and that moment lit a spark. From printing "Hello World" to solving basic patterns, every line of code was a new adventure.</p>
+                </div>
+
+                <div class="timeline-item slide-up">
+                    <h3>Learning, Debugging, Growing</h3>
+                    <p>As I got comfortable with C, I transitioned to C++ to explore object-oriented programming. Soon after, I began experimenting with Python — and absolutely loved how versatile and beginner-friendly it was. I also explored the basics of Java and gradually started to understand how different languages solve problems in unique ways. During this time, I also dabbled in SQL and basic database concepts.</p>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>C & C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>Java (Basic)</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-title">
+                            <span>SQL & DBMS</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item slide-up">
+                    <h3>What I’m Focusing on Now</h3>
+                    <p>Right now, I’m deepening my understanding of DSA and solving problems to sharpen my logic. I’m also working on applying coding principles to real-world problems and collaborating on group projects to build scalable solutions. Whether it’s exploring time complexity or designing efficient algorithms — I’m enjoying every step of the journey.</p>
+                </div>
+            </div>
+
+            <h3>Mini Projects & Practice</h3>
+            <div class="project-cards">
+                <div class="project-card fade-in">
+                    <h4>Student Record System</h4>
+                    <p>A basic C++ project using file handling to manage student data efficiently.</p>
+                    <div class="tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">File Handling</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h4>Simple Calculator</h4>
+                    <p>A Python-based CLI calculator that performs all basic arithmetic operations with input validation.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CLI</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h4>SQL Query Practice</h4>
+                    <p>Executed a set of structured queries to manage student data in a sample database, practicing CRUD operations and joins.</p>
+                    <div class="tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">DBMS</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#services" class="btn back-btn"><i class='bx bx-arrow-back'></i> Back to Works</a>
+        </div>
+    </div>
+</section>
     </main>
     
     <footer>

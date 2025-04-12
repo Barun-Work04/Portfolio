@@ -819,6 +819,23 @@ header.shadow {
 .services-box.hovered a {
     background: rgba(255, 255, 255, 0.2);
 }
+.services-box box-icon {
+    padding-top: 1rem;
+    width: 60px;
+    height: 60px;
+    color: var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.services-box:hover box-icon {
+    color: #fff;
+    transform: translateY(-10px) scale(1.1);
+}
+
+.services-box.hovered box-icon {
+    color: #fff;
+}
+
 
 /* Journey Sections */
 .journey {
